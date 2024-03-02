@@ -1,0 +1,8 @@
+sources:
+  - name: crowdsales
+    handler:
+      graphql:
+        endpoint: http://localhost:8000/subgraphs/name/moleculexyz/crowdsale
+
+documents:
+  - ./graphql/**/*.graphql

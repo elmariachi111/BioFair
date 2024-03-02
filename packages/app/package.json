@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "wagmi": "wagmi generate"
+    "wagmi": "wagmi generate",
+    "graphql": "env-cmd -x -f .env --fallback --no-override --silent graphclient build && rm -rf src/generated/graphclient && mv .graphclient src/generated/graphclient"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.24.1",
@@ -22,6 +23,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@graphprotocol/client-cli": "^3.0.0",
     "@tailwindcss/typography": "^0.5.10",
     "@types/node": "^20",
     "@types/react": "^18",
@@ -29,6 +31,7 @@
     "@wagmi/cli": "^2.1.1",
     "autoprefixer": "^10.4.17",
     "daisyui": "^4.7.2",
+    "env-cmd": "^10.1.0",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
     "postcss": "^8.4.35",
