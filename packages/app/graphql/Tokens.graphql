@@ -1,0 +1,6 @@
+fragment ERC20 on Token {
+  id
+  symbol
+  name
+  decimals
+}

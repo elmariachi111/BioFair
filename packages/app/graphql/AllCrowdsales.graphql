@@ -1,0 +1,18 @@
+query AllCrowdsales {
+  crowdSales {
+    id
+    type
+    state
+    creator
+
+    token {
+      ...ERC20
+    }
+    salesAmount
+    biddingToken {
+      ...ERC20
+    }
+    amountRaised
+    fundingGoal
+  }
+}
